@@ -81,12 +81,13 @@ h1, h2, h3, h4 {
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     
-    /* GAYA PENTING UNTUK MEMUAT GAMBAR SEBAGAI BACKGROUND */
-    background-image: url('gambar1.jpg'); /* ⬅️ FILE GAMBAR ANDA */
-    height: 400px; 
+    /* GAMBAR 1: DIUBAH KE NAMA FILE GITHUB BARU */
+    background-image: url('IMG_20251006_075608.jpg'); 
+    /* TINGGI DISESUAIKAN */
+    height: 450px; 
     background-size: cover;
     background-position: center;
-    background-color: #ccc; /* Warna fallback jika gambar gagal dimuat */
+    background-color: #ccc; 
 }
 
 .hero-overlay {
@@ -145,7 +146,7 @@ h1, h2, h3, h4 {
 }
 
 .sidebar-left li a {
-    display: flex; /* Untuk merapikan ikon */
+    display: flex; 
     align-items: center;
     padding: 12px;
     margin-bottom: 8px;
@@ -160,7 +161,7 @@ h1, h2, h3, h4 {
     margin-right: 15px;
     color: var(--color-primary);
     font-size: 16px;
-    width: 20px; /* Lebar tetap untuk ikon */
+    width: 20px; 
 }
 
 .sidebar-left li a:hover {
@@ -246,7 +247,8 @@ h1, h2, h3, h4 {
 /* GAYA GAMBAR KECIL */
 .image-gallery img {
     width: 100%;
-    height: 250px;
+    /* TINGGI DISESUAIKAN */
+    height: 280px;
     object-fit: cover;
     border-radius: 8px;
     margin-top: 15px;
