@@ -1,29 +1,46 @@
+/* PALET WARNA BARU */
+:root {
+    --color-primary: #1e3a8a; /* Biru Tua Sekolah (Navy) */
+    --color-secondary: #fcd34d; /* Kuning Cerah (Aksen Ceria) */
+    --color-accent: #10b981; /* Hijau Muda (Aksen Tombol Galeri) */
+    --color-text: #1f2937; /* Teks Gelap */
+    --color-subtle-bg: #f3f4f6; /* Latar Belakang Abu Muda */
+    --color-white: #ffffff;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+}
+
 /* Gaya Umum */
 body {
-    font-family: 'Roboto', sans-serif; /* Font modern */
-    background-color: #f0f2f5; /* Warna latar belakang Facebook */
+    /* Menggunakan Open Sans untuk Paragraf */
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-subtle-bg);
     margin: 0;
     padding: 0;
-    color: #1c1e21;
+    color: var(--color-text);
 }
 
 a {
     text-decoration: none;
-    color: #1877f2; /* Warna link khas Facebook */
-    /* Transisi Halus pada Link */
+    color: var(--color-primary);
     transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-    color: #0c62e3;
+    color: var(--color-primary);
     text-decoration: underline;
 }
 
-/* Header/Navbar - Mirip Bar Atas Facebook */
+h1, h2, h3, h4 {
+    /* Menggunakan Poppins untuk Judul */
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-text);
+}
+
+/* Header/Navbar */
 .navbar {
-    background-color: #ffffff; /* Putih bersih */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
-    padding: 10px 20px;
+    background-color: var(--color-white);
+    box-shadow: 0 2px 8px var(--color-shadow);
+    padding: 15px 40px; /* Padding lebih besar */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,50 +50,100 @@ a:hover {
 }
 
 .logo h1 {
-    color: #1877f2; /* Warna biru khas */
+    color: var(--color-primary);
     margin: 0;
-    font-size: 24px;
+    font-size: 28px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo i {
+    color: var(--color-secondary); /* Ikon warna cerah */
+    font-size: 28px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .nav-links a {
     margin-left: 20px;
-    padding: 8px 12px;
-    color: #1c1e21;
-    font-weight: 500;
-    border-radius: 6px;
-    /* Transisi Halus pada Tombol Navigasi */
+    padding: 10px 15px;
+    color: var(--color-text);
+    font-weight: 600;
+    border-radius: 8px;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .nav-links a:hover, .nav-links a.active {
-    background-color: #f0f2f5;
-    color: #1877f2;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
 }
 
-/* Tata Letak Utama - Mirip Tiga Kolom Facebook */
+/* GAMBAR UTAMA (HERO SECTION) */
+.hero-image {
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image .main-image {
+    width: 100%;
+    height: 400px; /* Tinggi Tetap untuk Gambar Besar */
+    object-fit: cover; /* Memastikan gambar menutupi area */
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+    padding: 30px 40px 20px;
+}
+
+.hero-overlay h2 {
+    color: var(--color-white);
+    margin: 0;
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Tata Letak Utama */
 .container {
     display: flex;
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 15px;
-    gap: 20px; /* Jarak antar kolom */
+    gap: 30px; /* Jarak antar kolom lebih besar */
 }
 
+/* Sidebar */
 .sidebar-left, .sidebar-right {
-    flex: 0 0 250px; /* Lebar tetap untuk sidebar */
-    padding: 15px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    height: fit-content; /* Agar tidak memanjang ke bawah tak terbatas */
+    flex: 0 0 280px; /* Lebar lebih besar */
+    padding: 20px;
+    background-color: var(--color-white);
+    border-radius: 10px; /* Lebih melengkung */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Bayangan lembut */
+    height: fit-content;
+    margin-top: 10px;
 }
 
 .sidebar-left h3, .sidebar-right h3 {
-    color: #606770; /* Warna abu-abu lembut */
-    font-size: 16px;
+    color: var(--color-primary);
+    font-size: 18px;
     margin-top: 0;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--color-secondary); /* Garis Kuning Aksen */
+    margin-bottom: 15px;
+}
+
+.sidebar-left h3 i, .sidebar-right h3 i {
+    margin-right: 10px;
+    color: var(--color-secondary);
 }
 
 .sidebar-left ul {
@@ -86,101 +153,162 @@ a:hover {
 
 .sidebar-left li a {
     display: block;
-    padding: 10px;
-    margin-bottom: 5px;
-    color: #1c1e21;
-    border-radius: 6px;
-    /* Transisi Halus pada Item Sidebar */
+    padding: 12px;
+    margin-bottom: 8px;
+    color: var(--color-text);
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: var(--color-subtle-bg); /* Latar belakang item */
     transition: background-color 0.2s ease-out;
 }
 
-.sidebar-left li a:hover {
-    background-color: #f0f2f5;
-    text-decoration: none;
+.sidebar-left li a i {
+    margin-right: 15px;
+    color: var(--color-primary);
+    font-size: 16px;
 }
 
-.icon {
-    margin-right: 10px;
+.sidebar-left li a:hover {
+    background-color: #e5e7eb;
+    text-decoration: none;
+    color: var(--color-primary);
 }
 
 .content {
-    flex: 1; /* Ambil sisa ruang di tengah */
+    flex: 1;
     min-width: 0;
 }
 
-/* Postingan/Konten Utama - Mirip Kartu Postingan Facebook */
+/* Postingan/Konten Utama */
 .post-card {
-    background-color: #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Bayangan lebih tegas dari sidebar */
-    /* Transisi Halus untuk Efek Hover Elegan */
+    background-color: var(--color-white);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; 
 }
 
 .post-card:hover {
-    /* Sedikit terangkat saat di-hover */
-    transform: translateY(-5px); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px); /* Lebih terangkat */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .post-card h2 {
-    color: #1c1e21;
+    color: var(--color-primary); /* Judul Biru Tua */
     margin-top: 0;
-    font-size: 20px;
+    font-size: 24px;
+    border-left: 5px solid var(--color-secondary); /* Garis Aksen Kuning */
+    padding-left: 10px;
 }
 
 .post-meta {
-    color: #606770;
-    font-size: 13px;
-    margin-bottom: 15px;
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
-.read-more {
+.post-meta i {
+    margin-right: 5px;
+}
+
+/* Tombol Baca Selengkapnya */
+.btn-read-more {
     display: inline-block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #1877f2;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: var(--color-text); /* Teks gelap */
+    background-color: var(--color-secondary); /* Kuning Aksen */
+    border-radius: 6px;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.btn-read-more:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* Tombol Lihat Galeri */
+.btn-gallery {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: var(--color-white);
+    background-color: var(--color-accent); /* Hijau Aksen */
+    border-radius: 6px;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.btn-gallery:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    text-decoration: none;
 }
 
 .image-gallery img {
-    max-width: 100%;
-    border-radius: 6px;
-    margin-top: 10px;
+    width: 100%;
+    height: 250px; /* Tinggi Tetap untuk Gambar Kecil */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 15px;
 }
 
 /* Kotak Acara (Sidebar Kanan) */
-.event-item {
-    padding: 10px 0;
-    border-bottom: 1px dashed #e5e5e5;
-    /* Transisi Halus pada Item Acara */
+.sidebar-right .event-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 5px;
     transition: background-color 0.2s ease-out;
-}
-
-.event-item:hover {
-    background-color: #f7f7f7;
     border-radius: 4px;
+    cursor: pointer;
 }
 
-.event-item h4 {
-    margin: 0 0 5px 0;
-    color: #1c1e21;
+.sidebar-right .event-item:last-child {
+    border-bottom: none;
 }
 
-.event-item p {
+.sidebar-right .event-item:hover {
+    background-color: var(--color-subtle-bg);
+}
+
+.event-name {
     margin: 0;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.event-date {
+    margin: 5px 0 0 0;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.event-date i {
+    color: var(--color-accent); /* Ikon Kalender Hijau */
+    margin-right: 5px;
+}
+
+/* Informasi Sekolah */
+.sidebar-right p {
     font-size: 14px;
-    color: #606770;
+    margin: 5px 0;
+}
+
+.sidebar-right p i {
+    color: var(--color-primary);
+    margin-right: 8px;
 }
 
 /* Footer */
 .footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    background-color: #ffffff;
-    color: #606770;
-    border-top: 1px solid #e5e5e5;
+    padding: 25px;
+    margin-top: 40px;
+    background-color: var(--color-primary); /* Footer Biru Tua */
+    color: var(--color-white);
     font-size: 14px;
+    font-weight: 400;
 }
