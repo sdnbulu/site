@@ -1,0 +1,186 @@
+/* Gaya Umum */
+body {
+    font-family: 'Roboto', sans-serif; /* Font modern */
+    background-color: #f0f2f5; /* Warna latar belakang Facebook */
+    margin: 0;
+    padding: 0;
+    color: #1c1e21;
+}
+
+a {
+    text-decoration: none;
+    color: #1877f2; /* Warna link khas Facebook */
+    /* Transisi Halus pada Link */
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #0c62e3;
+    text-decoration: underline;
+}
+
+/* Header/Navbar - Mirip Bar Atas Facebook */
+.navbar {
+    background-color: #ffffff; /* Putih bersih */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    color: #1877f2; /* Warna biru khas */
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    padding: 8px 12px;
+    color: #1c1e21;
+    font-weight: 500;
+    border-radius: 6px;
+    /* Transisi Halus pada Tombol Navigasi */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: #f0f2f5;
+    color: #1877f2;
+}
+
+/* Tata Letak Utama - Mirip Tiga Kolom Facebook */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    gap: 20px; /* Jarak antar kolom */
+}
+
+.sidebar-left, .sidebar-right {
+    flex: 0 0 250px; /* Lebar tetap untuk sidebar */
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    height: fit-content; /* Agar tidak memanjang ke bawah tak terbatas */
+}
+
+.sidebar-left h3, .sidebar-right h3 {
+    color: #606770; /* Warna abu-abu lembut */
+    font-size: 16px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.sidebar-left ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-left li a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    color: #1c1e21;
+    border-radius: 6px;
+    /* Transisi Halus pada Item Sidebar */
+    transition: background-color 0.2s ease-out;
+}
+
+.sidebar-left li a:hover {
+    background-color: #f0f2f5;
+    text-decoration: none;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.content {
+    flex: 1; /* Ambil sisa ruang di tengah */
+    min-width: 0;
+}
+
+/* Postingan/Konten Utama - Mirip Kartu Postingan Facebook */
+.post-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Bayangan lebih tegas dari sidebar */
+    /* Transisi Halus untuk Efek Hover Elegan */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; 
+}
+
+.post-card:hover {
+    /* Sedikit terangkat saat di-hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.post-card h2 {
+    color: #1c1e21;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.post-meta {
+    color: #606770;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1877f2;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+/* Kotak Acara (Sidebar Kanan) */
+.event-item {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e5e5e5;
+    /* Transisi Halus pada Item Acara */
+    transition: background-color 0.2s ease-out;
+}
+
+.event-item:hover {
+    background-color: #f7f7f7;
+    border-radius: 4px;
+}
+
+.event-item h4 {
+    margin: 0 0 5px 0;
+    color: #1c1e21;
+}
+
+.event-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #606770;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #ffffff;
+    color: #606770;
+    border-top: 1px solid #e5e5e5;
+    font-size: 14px;
+}
