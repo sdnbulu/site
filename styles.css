@@ -129,9 +129,7 @@ h1, h2, h3, h4 {
     background-color: #ccc;
     display: flex;
     align-items: flex-end;
-    /* --- PERBAIKAN DI SINI --- */
-    /* Langsung panggil nama file karena berada di folder yang sama */
-    background-image: url('gambar1.jpg'); 
+    background-image: url('gambar1.jpg');
 }
 
 .hero-overlay {
@@ -216,6 +214,16 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Tombol Umum */
